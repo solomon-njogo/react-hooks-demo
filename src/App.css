@@ -1,0 +1,117 @@
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.container h1 {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+.container h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.container h3 {
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+}
+
+.container form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.container input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #c5c9d2;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.container input:focus {
+  outline: 2px solid #3b6fd8;
+  outline-offset: 1px;
+  border-color: #3b6fd8;
+}
+
+.container button {
+  justify-self: start;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #2f5fbf;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background: #254ea0;
+}
+
+.container hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid #d7dbe3;
+}
+
+.container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+}
+
+.container th,
+.container td {
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px solid #e2e5ec;
+  text-align: left;
+  word-break: break-word;
+}
+
+.container th {
+  background: #f3f5f9;
+  font-weight: 600;
+}
+
+.container td button {
+  padding: 0.35rem 0.7rem;
+  background: #b42318;
+  font-size: 0.9rem;
+}
+
+.container td button:hover {
+  background: #912018;
+}
+
+@media (max-width: 639px) {
+  .container {
+    overflow-x: hidden;
+  }
+
+  .container table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .container form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container form button {
+    grid-column: 1 / -1;
+  }
+}
